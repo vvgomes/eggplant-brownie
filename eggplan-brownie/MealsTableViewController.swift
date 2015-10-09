@@ -1,14 +1,11 @@
 import UIKit
 
 class MealsTableViewController: UITableViewController, AddMealDelegate {
-    var meals = [
-        Meal(name: "Cheesecake", happiness: 3),
-        Meal(name: "Eggplant Brownie", happiness: 2)
-    ]
+    var meals = Array<Meal>()
     
     // AddMealDelegate
     func add(meal: Meal) {
-        self.meals.append(meal)
+        meals.append(meal)
         tableView.reloadData()
     }
     
@@ -19,6 +16,7 @@ class MealsTableViewController: UITableViewController, AddMealDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let meal = meals[indexPath.row]
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        
         cell.textLabel?.text = meal.name
         return cell
     }

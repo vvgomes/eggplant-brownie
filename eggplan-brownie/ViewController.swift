@@ -7,9 +7,7 @@ protocol AddMealDelegate {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var nameField: UITextField!
     @IBOutlet var happinessField: UITextField!
-    
     var delegate: AddMealDelegate?
-    
     let items = [
         Item(name: "Eggplant Brownie", calories: 10),
         Item(name: "Zucchini Muffin", calories: 10),
@@ -18,7 +16,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Item(name: "Chocolate frosting", calories: 1000),
         Item(name: "Chocolate chip", calories: 1000)
     ]
-    
     var selected = Array<Item>()
     
     @IBAction func add() {
@@ -45,9 +42,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let row = indexPath.row
-        let item = items[row]
+        let item = items[indexPath.row]
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        
         cell.textLabel?.text = item.name
         return cell
     }

@@ -1,36 +1,15 @@
-//
-//  eggplan_brownieTests.swift
-//  eggplan-brownieTests
-//
-//  Created by Gomes, Vinicius on 10/5/15.
-//  Copyright © 2015 vvgomes. All rights reserved.
-//
-
 import XCTest
 @testable import eggplan_brownie
 
 class eggplan_brownieTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testMealEquality() {
+        XCTAssertTrue(Meal(name: "Cheesecake", happiness: 4) == Meal(name: "Cheesecake", happiness: 2))
+        XCTAssertFalse(Meal(name: "Cheesecake", happiness: 4) == Meal(name: "Brownie", happiness: 2))
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testItemEquality() {
+        XCTAssertTrue(Item(name: "Suggar", calories: 100) == Item(name: "Suggar", calories: 200))
+        XCTAssertFalse(Item(name: "Suggar", calories: 100) == Item(name: "Salt", calories: 200))
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
