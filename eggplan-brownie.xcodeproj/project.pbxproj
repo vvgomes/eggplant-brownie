@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F17E5EB1BC4ECFC00356B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17E5EA1BC4ECFC00356B7C /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8F17E5EE1BC4ED0C00356B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F17E5EC1BC4ED0C00356B7C /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		8F2A949E1BC76F4D00DC5B22 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A949C1BC76F4D00DC5B22 /* NewItemViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8F2A949F1BC76F4D00DC5B22 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2A949D1BC76F4D00DC5B22 /* NewItemViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		8F3993DB1BC4F18A00B84298 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3993D91BC4F18A00B84298 /* Item.swift */; settings = {ASSET_TAGS = (); }; };
 		8F3993DC1BC4F18A00B84298 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3993DA1BC4F18A00B84298 /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 		8FB7D46E1BC374390011C892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB7D46D1BC374390011C892 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 		8F17E5E21BC4CE1E00356B7C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		8F17E5EA1BC4ECFC00356B7C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F17E5ED1BC4ED0C00356B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F2A949C1BC76F4D00DC5B22 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		8F2A949D1BC76F4D00DC5B22 /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
 		8F3993D91BC4F18A00B84298 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8F3993DA1BC4F18A00B84298 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		8FB7D46A1BC374390011C892 /* eggplan-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplan-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 			children = (
 				8F3993D91BC4F18A00B84298 /* Item.swift */,
 				8F3993DA1BC4F18A00B84298 /* Meal.swift */,
+				8F2A949C1BC76F4D00DC5B22 /* NewItemViewController.swift */,
 				8F17E5EA1BC4ECFC00356B7C /* ViewController.swift */,
 				8FB8FBD31BC5D10D0047377D /* MealsTableViewController.swift */,
 				8FB7D46D1BC374390011C892 /* AppDelegate.swift */,
@@ -114,6 +119,7 @@
 				8F17E5EC1BC4ED0C00356B7C /* Main.storyboard */,
 				8FB7D4761BC374390011C892 /* LaunchScreen.storyboard */,
 				8FB7D4791BC374390011C892 /* Info.plist */,
+				8F2A949D1BC76F4D00DC5B22 /* NewItemViewController.xib */,
 			);
 			path = "eggplan-brownie";
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			files = (
 				8FB7D4781BC374390011C892 /* LaunchScreen.storyboard in Resources */,
 				8FB7D4751BC374390011C892 /* Assets.xcassets in Resources */,
+				8F2A949F1BC76F4D00DC5B22 /* NewItemViewController.xib in Resources */,
 				8F17E5EE1BC4ED0C00356B7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +278,7 @@
 			files = (
 				8FB8FBD41BC5D10D0047377D /* MealsTableViewController.swift in Sources */,
 				8F3993DC1BC4F18A00B84298 /* Meal.swift in Sources */,
+				8F2A949E1BC76F4D00DC5B22 /* NewItemViewController.swift in Sources */,
 				8F17E5EB1BC4ECFC00356B7C /* ViewController.swift in Sources */,
 				8F3993DB1BC4F18A00B84298 /* Item.swift in Sources */,
 				8FB7D46E1BC374390011C892 /* AppDelegate.swift in Sources */,

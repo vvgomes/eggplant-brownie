@@ -4,18 +4,17 @@ protocol AddMealDelegate {
     func add(meal: Meal)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddItemDelegate {
     @IBOutlet var nameField: UITextField!
     @IBOutlet var happinessField: UITextField!
+    @IBOutlet var tableView: UITableView!
+    
     var delegate: AddMealDelegate?
-    let items = [
-        Item(name: "Eggplant Brownie", calories: 10),
-        Item(name: "Zucchini Muffin", calories: 10),
-        Item(name: "Cookie", calories: 10),
-        Item(name: "Coconut oil", calories: 500),
-        Item(name: "Chocolate frosting", calories: 1000),
-        Item(name: "Chocolate chip", calories: 1000)
+    
+    var items = [
+        Item(name: "Eggplant Brownie", calories: 10)
     ]
+    
     var selected = Array<Item>()
     
     @IBAction func add() {
@@ -62,5 +61,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 selected.removeAtIndex(index)
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        let newItemButton = UIBarButtonItem(
+            title: "New item",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: Selector("showNewItem"))
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+    
+    func showNewItem() {
+        let newItem = NewItemViewController(delegate: self)
+        if let navigation = self.navigationController {
+            navigation.pushViewController(newItem, animated: true)
+        }
+    }
+    
+    // AddItemDelegate
+    func addItem(item: Item) {
+        items.append(item)
+        if tableView == nil { return }
+        tableView!.reloadData()
     }
 }
