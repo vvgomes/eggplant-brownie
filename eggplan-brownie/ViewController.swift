@@ -25,7 +25,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let meal = Meal(name: name, happiness: happiness!)
         meal.items = selected
-        print("Eaten: \(meal.name) - \(meal.happiness) - \(meal.items)")
         
         if delegate != nil {
             delegate!.add(meal)

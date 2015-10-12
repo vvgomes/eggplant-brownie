@@ -36,3 +36,6 @@ desert.items.forEach { (item) -> () in
     print(" => \(item.name) : \(item.calories)")
 }
 print(desert.totalCalories())
+
+let list = ["foo", "bar"]
+print(list + ["baz"])

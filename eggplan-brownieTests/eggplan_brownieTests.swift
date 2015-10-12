@@ -12,4 +12,13 @@ class eggplan_brownieTests: XCTestCase {
         XCTAssertTrue(Item(name: "Suggar", calories: 100) == Item(name: "Suggar", calories: 200))
         XCTAssertFalse(Item(name: "Suggar", calories: 100) == Item(name: "Salt", calories: 200))
     }
+    
+    func testMealDetails() {
+        var meal = Meal(name: "Cheesecake", happiness: 4)
+        meal.items.append(Item(name: "Sugar", calories: 2.5))
+        meal.items.append(Item(name: "Cheese", calories: 2.5))
+        XCTAssertEqual(
+            "Happiness: 4\n* Sugar - calories: 2.5\n* Cheese - calories: 2.5\nTotal: 5.0 calories",
+            meal.details())
+    }
 }

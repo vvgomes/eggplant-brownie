@@ -21,7 +21,7 @@ class NewItemViewController: UIViewController {
     
     @IBAction func addNewItem() {
         let name = nameField.text!
-        let calories = NSString(string: nameField.text!).doubleValue
+        let calories = NSString(string: caloriesField.text!).doubleValue
         let item = Item(name: name, calories: calories)
         
         if delegate != nil {
